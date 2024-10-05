@@ -3,9 +3,11 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lightgreen; /* Set background color to light green */
+  background: linear-gradient(120deg, #1b9147 0%, #b1e0c2 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }

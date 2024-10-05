@@ -1,75 +1,80 @@
 .home-container {
-    display: flex;
-    justify-content: space-between; /* Ensure space between home-left and home-right */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full viewport height */
-    padding: 20px;
-  }
-  
-  .home-left {
-    flex: 1;
-    padding: 0 20px 0 100px; /* Add padding to the left */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: flex-start; /* Align content to the left */
-    text-align: left; /* Align text to the left */
-    transform: translateY(-100px); /* Raise the section up */
-  }
-  
-  .home-left h1 {
-    margin-top: 0; /* Remove top margin */
-    font-size: 2.5em; /* Increase font size */
-    font-weight: 700; /* Make the font bold */
-    margin-bottom: 20px; /* Add space below the heading */
-  }
-  
-  .home-left p {
-    font-size: 1.5em; /* Increase font size */
-    margin-bottom: 20px; /* Add space below the paragraph */
-  }
-  
-  .home-left button {
-    font-size: 1.2em; /* Increase button font size */
-    padding: 15px 30px; /* Increase button padding */
-    margin-top: 20px;
-    background-color: #1e5423; /* Add background color */
-    color: white; /* Change text color to white */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Add border radius */
-    cursor: pointer; /* Change cursor to pointer */
-  }
-  
-  .home-left button:hover {
-    background-color: #4c8151; /* Change background color on hover */
-  }
-  
-  .home-right {
-    flex: 0 0 auto; /* Ensure it takes up the space of the map container */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center the map horizontally */
-    justify-content: center; /* Center the map vertically */
-    padding: 0 100px 0 20px; /* Add padding to the right */
-  }
-  
-  .home-right h2 {
-    margin-bottom: 10px;
-  }
-  
-  button {
-    margin-top: 20px;
-  }
-  
-  .map-container {
-    width: 600px; /* Set fixed width */
-    height: 600px; /* Set fixed height */
-    border-radius: 50%; /* Make the map round */
-    overflow: hidden; /* Ensure the content doesn't overflow the rounded corners */
-    aspect-ratio: 1 / 1; /* Maintain aspect ratio to keep it circular */
-    transform: translateY(-50px); /* Raise the map container higher */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    clip-path: circle(50% at 50% 50%); /* Clip the map to a circle */
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.home-left {
+  flex: 1;
+  padding: 0 20px 0 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  transform: translateY(-100px);
+  color: rgb(215, 235, 224);
+}
+
+.home-left h1 {
+  margin-top: 0;
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.home-left p {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  max-width: 550px;
+  text-align: left;
+}
+
+.home-left button {
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 15px 30px;
+  margin-top: 20px;
+  background-color: #1e5423;
+  color: rgb(215, 235, 224);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.home-left button:hover {
+  background-color: #4c8151;
+}
+
+.home-right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px 0 20px;
+}
+
+.home-right h2 {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 20px;
+}
+
+.map-container {
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  transform: translateY(-50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  clip-path: circle(50% at 50% 50%);
+  border: 5px solid #4c8151;
+}

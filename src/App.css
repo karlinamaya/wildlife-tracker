@@ -11,7 +11,7 @@ body {
   display: flex;
   justify-content: flex-end;
   padding: 10px 20px;
-  background-color: transparent; /* Optional: Set background color if needed */
+  background-color: transparent;
 }
 
 .navbar-list {
@@ -28,7 +28,8 @@ body {
 
 .navbar-item a {
   text-decoration: none;
-  color: black; /* Change color as needed */
+  color: rgb(215, 235, 224);
+  font-weight: 600;
 }
 
 .navbar-item a:hover {

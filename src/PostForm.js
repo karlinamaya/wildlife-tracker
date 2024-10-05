@@ -5,12 +5,21 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 
 const containerStyle = {
   width: '100%',
-  height: '400px',
+  height: '100%',
+  borderRadius: '50%', // Make the map circular
+  overflow: 'hidden', // Ensure the circular shape is maintained
 };
 
 const center = {
-  lat: 28.6024, // Default latitude
-  lng: -81.2001, // Default longitude
+  lat: 28.6024, // UCF latitude
+  lng: -81.2001, // UCF longitude
+};
+
+const options = {
+  mapTypeControl: false,
+  streetViewControl: false,
+  fullscreenControl: false,
+  disableDefaultUI: true,
 };
 
 function PostForm({ fetchPosts }) {
@@ -104,28 +113,31 @@ function PostForm({ fetchPosts }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
+      <label className="title-input">
         Title:
         <input type="text" value={title} onChange={(e) => setTitle(e.target.value)} required />
       </label>
-      <label>
+      <label className="content-input">
         Content:
         <textarea value={content} onChange={(e) => setContent(e.target.value)} required />
       </label>
-      <label>
+      <label className="upload-photo">
         Upload Image:
         <input type="file" onChange={handleImageChange} accept="image/*,.heic,.heif" />
       </label>
-      <LoadScript googleMapsApiKey="AIzaSyBkI2FPgRRtKJ2laQDPMKarXj5ooqaEWTw">
-        <GoogleMap
-          mapContainerStyle={containerStyle}
-          center={{ lat: latitude, lng: longitude }}
-          zoom={10}
-          onClick={handleMapClick}
-        >
-          {markerPosition && <Marker position={markerPosition} />}
-        </GoogleMap>
-      </LoadScript>
+      <div className="map-container">
+        <LoadScript googleMapsApiKey="AIzaSyBkI2FPgRRtKJ2laQDPMKarXj5ooqaEWTw">
+          <GoogleMap
+            mapContainerStyle={containerStyle}
+            center={{ lat: latitude, lng: longitude }}
+            zoom={15}
+            options={options}
+            onClick={handleMapClick}
+          >
+            {markerPosition && <Marker position={markerPosition} />}
+          </GoogleMap>
+        </LoadScript>
+      </div>
       <button type="submit">Submit Post</button>
     </form>
   );

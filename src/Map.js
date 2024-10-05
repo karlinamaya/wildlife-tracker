@@ -7,12 +7,14 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 28.6024, // Set initial latitude
-  lng: -81.2001, // Set initial longitude
+  lat: 28.6024,
+  lng: -81.2001,
 };
 
 const options = {
-  mapTypeControl: false, // Disable map and satellite buttons
+  mapTypeControl: false,
+  streetViewControl: false,
+  fullscreenControl: false,
 };
 
 function MyMap({ posts }) {

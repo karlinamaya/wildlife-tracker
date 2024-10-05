@@ -1,9 +1,15 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import MyMap from './Map';
-import './Home.css'; // Import the CSS file for Home component
+import './Home.css';
+import React, { useEffect } from 'react';
+
 
 function Home({ posts }) {
+  useEffect(() => {
+    console.log(posts);
+  }, [posts]);
+
+
   const navigate = useNavigate();
 
   const handleUploadClick = () => {
@@ -14,8 +20,9 @@ function Home({ posts }) {
     <div className="home-container">
       <div className="home-left">
         <h1>Knights' Wildlife Tracker</h1>
-        <p>Hello!</p>
-        <button onClick={handleUploadClick}>Upload a Post</button>
+        <p>Discover and share wildlife sightings across UCF's campus! Explore the interactive map, upload photos of animals you've spotted, 
+          and join a community of nature lovers tracking the biodiversity that makes UCF unique.</p>
+        <button onClick={handleUploadClick}>Submit a post</button>
       </div>
       <div className="home-right">
         <h2>Map</h2>

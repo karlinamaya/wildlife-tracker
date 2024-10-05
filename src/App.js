@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import PostSubmissionPage from './PostSubmissionPage';
 import Gallery from './Gallery';
-import Home from './Home'; // Import Home component
+import Home from './Home';
+import './App.css'; // Import the CSS file for App component
 
 function App() {
   const [posts, setPosts] = useState([]);
@@ -20,12 +21,12 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <nav>
-          <ul>
-            <li>
+        <nav className="navbar">
+          <ul className="navbar-list">
+            <li className="navbar-item">
               <Link to="/">Home</Link>
             </li>
-            <li>
+            <li className="navbar-item">
               <Link to="/gallery">Gallery</Link>
             </li>
           </ul>

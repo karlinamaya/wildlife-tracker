@@ -3,12 +3,16 @@ import { GoogleMap, LoadScript, Marker, InfoWindow } from '@react-google-maps/ap
 
 const containerStyle = {
   width: '100%',
-  height: '400px',
+  height: '100%',
 };
 
 const center = {
   lat: 28.6024, // Set initial latitude
   lng: -81.2001, // Set initial longitude
+};
+
+const options = {
+  mapTypeControl: false, // Disable map and satellite buttons
 };
 
 function MyMap({ posts }) {
@@ -23,31 +27,38 @@ function MyMap({ posts }) {
 
   return (
     <LoadScript googleMapsApiKey="AIzaSyBkI2FPgRRtKJ2laQDPMKarXj5ooqaEWTw">
-      <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={10}>
-        {markers.map((marker, index) => (
-          <Marker
-            key={index}
-            position={marker.position}
-            title={marker.title}
-            onClick={() => setSelectedMarker(marker)}
-          />
-        ))}
+      <div className="map-container">
+        <GoogleMap
+          mapContainerStyle={containerStyle}
+          center={center}
+          zoom={15}
+          options={options} // Apply the options to the map
+        >
+          {markers.map((marker, index) => (
+            <Marker
+              key={index}
+              position={marker.position}
+              title={marker.title}
+              onClick={() => setSelectedMarker(marker)}
+            />
+          ))}
 
-        {selectedMarker && (
-          <InfoWindow
-            position={selectedMarker.position}
-            onCloseClick={() => setSelectedMarker(null)}
-          >
-            <div>
-              <h3>{selectedMarker.title}</h3>
-              <p>{selectedMarker.content}</p>
-              {selectedMarker.imageUrl && (
-                <img src={selectedMarker.imageUrl} alt="Post" style={{ width: '100px' }} />
-              )}
-            </div>
-          </InfoWindow>
-        )}
-      </GoogleMap>
+          {selectedMarker && (
+            <InfoWindow
+              position={selectedMarker.position}
+              onCloseClick={() => setSelectedMarker(null)}
+            >
+              <div>
+                <h3>{selectedMarker.title}</h3>
+                <p>{selectedMarker.content}</p>
+                {selectedMarker.imageUrl && (
+                  <img src={selectedMarker.imageUrl} alt="Post" style={{ width: '100px' }} />
+                )}
+              </div>
+            </InfoWindow>
+          )}
+        </GoogleMap>
+      </div>
     </LoadScript>
   );
 }

@@ -1,0 +1,55 @@
+/* Container styling */
+.post-submission-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  /* Form styling */
+  .post-submission-page form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    align-items: center; /* Center the form */
+  }
+  
+  /* Title input styling */
+  .post-submission-page .title-input {
+    margin-bottom: 30px;  /* Increased margin for more padding */
+    padding-bottom: 100px;
+  }
+  
+  /* Content input styling */
+  .post-submission-page .content-input {
+    margin-bottom: 30px; /* Increased margin for more padding */
+  }
+  
+  /* Upload photo styling */
+  .post-submission-page .upload-photo {
+    margin-bottom: 30px; /* Increased margin for more padding */
+  }
+  
+  /* Map container styling */
+  .post-submission-page .map-container {
+    margin-top: 50px; /* Move the map further down the page */
+  }
+  
+  /* Submit button styling */
+  .post-submission-page button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #61dafb;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-submission-page button[type="submit"]:hover {
+    background-color: pink;
+  }

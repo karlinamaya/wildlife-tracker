@@ -34,7 +34,7 @@ function MyMap({ posts }) {
           mapContainerStyle={containerStyle}
           center={center}
           zoom={15}
-          options={options} // Apply the options to the map
+          options={options}
         >
           {markers.map((marker, index) => (
             <Marker

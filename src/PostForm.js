@@ -6,13 +6,13 @@ import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 const containerStyle = {
   width: '100%',
   height: '100%',
-  borderRadius: '50%', // Make the map circular
-  overflow: 'hidden', // Ensure the circular shape is maintained
+  borderRadius: '50%',
+  overflow: 'hidden',
 };
 
 const center = {
-  lat: 28.6024, // UCF latitude
-  lng: -81.2001, // UCF longitude
+  lat: 28.6024,
+  lng: -81.2001,
 };
 
 const options = {

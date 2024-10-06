@@ -1,6 +1,6 @@
 import React from 'react';
 import PostForm from './PostForm';
-import './PostSubmissionPage.css'; // Ensure this path is correct
+import './PostSubmissionPage.css';
 
 function PostSubmissionPage({ fetchPosts }) {
   return (

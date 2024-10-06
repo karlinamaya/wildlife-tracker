@@ -1,6 +1,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: lightgreen;
+  background: linear-gradient(120deg, #1b9147 0%, #b1e0c2 100%);
 }
 
 .App {

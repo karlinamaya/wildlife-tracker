@@ -32,10 +32,9 @@
   text-align: left;
 }
 
-/* Added font styles for button */
 .home-left button {
-  font-family: inherit; /* Make sure it inherits the font from parent */
-  font-size: 1.2em; /* Match this with the paragraph text */
+  font-family: inherit;
+  font-size: 1.2em;
   font-weight: 500;
   padding: 15px 30px;
   margin-top: 20px;
@@ -63,10 +62,9 @@
   margin-bottom: 10px;
 }
 
-/* Ensure button styling is consistent */
 button {
-  font-family: inherit; /* Inherit the font family */
-  font-size: 1.5em; /* Match this with the paragraph text */
+  font-family: inherit;
+  font-size: 1.5em;
   margin-top: 20px;
 }
 

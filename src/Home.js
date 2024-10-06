@@ -25,7 +25,6 @@ function Home({ posts }) {
         <button onClick={handleUploadClick}>Submit a post</button>
       </div>
       <div className="home-right">
-        <h2>Map</h2>
         <MyMap posts={posts} /> {/* Pass posts to the map */}
       </div>
     </div>

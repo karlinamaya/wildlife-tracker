@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import PostSubmissionPage from './PostSubmissionPage';
 import Gallery from './Gallery';
 import Home from './Home';
-import './App.css'; // Import the CSS file for App component
+import './App.css';
 
 function App() {
   const [posts, setPosts] = useState([]);

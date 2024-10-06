@@ -100,3 +100,19 @@
   border-radius: 50%;
   overflow: hidden;
 }
+
+.post-submission-page button[type="submit"] {
+  all: unset;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  border: 2px solid #4c8151;
+}
+
+.post-submission-page button[type="submit"]:hover {
+  background-color: #e0e0e0;
+}

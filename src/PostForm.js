@@ -103,6 +103,7 @@ function PostForm({ fetchPosts }) {
       });
       if (response.ok) {
         fetchPosts();
+        alert('Post submitted!');
       } else {
         console.error('Failed to upload post');
       }

@@ -1,0 +1,70 @@
+/* Gallery.css */
+.gallery-title {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: rgb(215, 235, 224);
+  }
+  
+  .gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .gallery-item {
+    background-color: rgb(215, 235, 224);
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    height: 300px; /* Keep height consistent */
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .gallery-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .gallery-item .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space items evenly */
+    align-items: center;
+    padding: 20px;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .white-box {
+    background-color: white; /* White box background */
+    border-radius: 10px; /* Round corners */
+    padding: 15px; /* Padding inside the box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    width: calc(100%); /* Full width minus margins */
+    max-height: 100%; /* Set a maximum height for the white box */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    box-sizing: border-box; /* Include padding in width calculation */
+    flex-grow: 1; /* Allow the white box to grow and fill available space */
+    margin: 20pxs;
+  }
+  
+  .gallery-item img {
+    width: calc(50% - 20px); /* Adjust the width to account for margins */
+    height: auto;
+    object-fit: cover;
+    border-left: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 20px; /* Add margin around the image */
+    border-radius: 8px;
+  }
+  
+  .gallery-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
